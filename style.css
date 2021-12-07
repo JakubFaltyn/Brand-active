@@ -133,7 +133,10 @@ nav {
 .offer{
     display: flex;
     align-items: center;
+    justify-items:center;
     justify-content: space-between;
+    padding-top: 96px;
+    height: 952px;
 }
 
 .pricing {
@@ -141,6 +144,8 @@ nav {
     flex-direction: column;
     gap: 24px;
     width: 580px;
+    padding-left: 240px;
+    padding-right:240px;
 }
 .pricing h1{
     font-weight: 800;
@@ -160,4 +165,12 @@ nav {
     font-size: 20px;
     line-height: 30px;
     text-align: justify;
+}
+
+.pricing button{
+    /* Do uniwersalizacji */
+    height:50px;
+    width:105px;
+    background-color: white;
+    
 }
