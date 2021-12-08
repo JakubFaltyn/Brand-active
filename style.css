@@ -259,7 +259,7 @@ nav {
   }
   
   .swiper--quotes{
-    height: 440px;
+    height: 500px;
     width:1440px;
   }
   /* Quote card*/
@@ -267,24 +267,36 @@ nav {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width:465px;
+      width:475px;
       gap: 67px;
   }
 
-  .quote-card::before{
+  .quote-card p::before{
     content: "";
     background-image: url(/assets/Quotes-up-icon.svg);
     background-repeat: no-repeat;
-    height: 100px;
-    width: 100px;
+    height: 86px;
+    width: 95px;
     position: absolute;
     overflow:auto;
     z-index: -1;
     left: 0;
     top: 0;
-    margin-right: 300px;
   }
 
+  .quote-card p::after{
+    content: "";
+    background-image: url(/assets/Quotes-down-icon.svg);
+    background-repeat: no-repeat;
+    height: 86px;
+    width: 95px;
+    position: absolute;
+    overflow:auto;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 110px;
+  }
 
   .quote-card p{
     font-family: "Basis Grotesque Pro";
@@ -293,6 +305,7 @@ nav {
     font-size: 24px;
     width:454px;
     line-height: 40px;
+    padding-top: 48px;
   }
 
   .quote-card h3{
@@ -309,4 +322,14 @@ nav {
 
   .swiper-pagination-bullet-active {
     --swiper-theme-color: black;
+  }
+
+  /* Footer */
+  footer{
+      display: flex;
+      color: white;
+      background-color: black;
+      height: 434px;
+      width: 100%;
+      margin-top: 60px;
   }
