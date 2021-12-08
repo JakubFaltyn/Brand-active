@@ -260,7 +260,7 @@ nav {
   
   .swiper--quotes{
     height: 440px;
-    width:1440px
+    width:1440px;
   }
   /* Quote card*/
   .quote-card{
@@ -271,6 +271,21 @@ nav {
       gap: 67px;
   }
 
+  .quote-card::before{
+    content: "";
+    background-image: url(/assets/Quotes-up-icon.svg);
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    overflow:auto;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    margin-right: 300px;
+  }
+
+
   .quote-card p{
     font-family: "Basis Grotesque Pro";
     font-style: normal;
@@ -278,9 +293,6 @@ nav {
     font-size: 24px;
     width:454px;
     line-height: 40px;
-    background-image: url(/assets/Quotes-up-icon.svg), url(/assets/Quotes-down-icon.svg);
-    background-position: right bottom, left top;
-    background-repeat: no-repeat;
   }
 
   .quote-card h3{
