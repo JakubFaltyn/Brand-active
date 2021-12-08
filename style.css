@@ -213,10 +213,32 @@ nav {
     object-position:50% 50%;
 }
 
-.btn--prev {
-    background
+.swiper-button-previous {
+    background-image: url(/assets/Previous-icon.svg);
 }
 
-.btn--next{
-
+.swiper-button-next{
+    background-image: url(/assets/Next-icon.svg);
 }
+
+.swiper-button-next {
+    background-image: url(/assets/Next-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 40% auto;
+    background-position: center;
+  }
+  
+  .swiper-button-next::after {
+    display: none;
+  }
+
+  .swiper-button-prev {
+    background-image: url(/assets/Previous-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 40% auto;
+    background-position: center;
+  }
+  
+  .swiper-button-prev::after {
+    display: none;
+  }

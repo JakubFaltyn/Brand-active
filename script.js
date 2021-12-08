@@ -3,8 +3,8 @@ const sliderBig = new Swiper('.swiper--big', {
   
   
     navigation: {
-        nextEl: '.btn--next',
-        prevEl: '.btn--prev',
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
   });
 
@@ -16,7 +16,7 @@ const sliderBig = new Swiper('.swiper--big', {
     spaceBetween: 24,
 
     navigation: {
-      nextEl: '.btn--next',
-      prevEl: '.btn--prev',
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
   });
