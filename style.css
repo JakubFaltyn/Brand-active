@@ -181,7 +181,7 @@ nav {
 
 /* Slider section */ 
 
-.slider {
+.slider-gallery {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -241,4 +241,36 @@ nav {
   
   .swiper-button-prev::after {
     display: none;
+  }
+
+  /* Quotes slider */
+  .slider-quotes {
+    padding-top: 96px;
+    padding-left: 240px;
+    padding-right: 240px;
+  }
+  
+  .swiper--quotes{
+    height: 490px;
+    width:1440px
+  }
+  /* Quote card*/
+  .quote-card{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width:454px;
+      gap: 67px;
+  }
+
+  .quote-card p{
+    font-family: "Basis Grotesque Pro";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 40px;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #000;
   }

@@ -9,7 +9,6 @@ const sliderBig = new Swiper('.swiper--big', {
   });
 
   const sliderSmall = new Swiper('.swiper--small', {
-    direction: 'horizontal',
     loop: true,
 
     slidesPerView: 3,
@@ -18,5 +17,16 @@ const sliderBig = new Swiper('.swiper--big', {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
+    },
+  });
+
+  const sliderQuotes = new Swiper('.swiper--quotes', {
+    loop: true,
+
+    slidesPerView: 3,
+    spaceBetween: 34,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
     },
   });
