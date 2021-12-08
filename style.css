@@ -334,3 +334,21 @@ nav {
       width: 100%;
       margin-top: 60px;
   }
+
+  footer h4{
+    font-family: "Gilroy ExtraBold";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  footer li{
+    font-family: "Gilroy Light";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 40px;
+  }
+
+  /* Uniwersalizacja social icons z nabar icons */
