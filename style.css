@@ -21,7 +21,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-/* Import font and set font*/
+/* Fonts*/
 @font-face {
     font-family: 'Gilroy Medium';
     src: local('Gilroy Medium'), local('Gilroy-Medium'),
@@ -52,6 +52,14 @@ time, mark, audio, video {
     src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'),
         url('/fonts/Gilroy-ExtraBold.woff2') format('woff2');
     font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Basis Grotesque Pro';
+    src: local('Basis Grotesque Pro'), local('Basis-Grotesque-Pro'),
+        url('/fonts/Basis\ Grotesque.woff2') format('woff2');
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -251,7 +259,7 @@ nav {
   }
   
   .swiper--quotes{
-    height: 490px;
+    height: 440px;
     width:1440px
   }
   /* Quote card*/
@@ -259,7 +267,7 @@ nav {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width:454px;
+      width:465px;
       gap: 67px;
   }
 
@@ -268,9 +276,25 @@ nav {
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
+    width:454px;
     line-height: 40px;
+    background-image: url(/assets/Quotes-up-icon.svg), url(/assets/Quotes-down-icon.svg);
+    background-position: right bottom, left top;
+    background-repeat: no-repeat;
+  }
+
+  .quote-card h3{
+    font-family: "Basis Grotesque Pro";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 65px;
   }
   
+  .swiper-pagination-bullet{
+    --swiper-pagination-bullet-size: 12px;
+  }
+
   .swiper-pagination-bullet-active {
-    background-color: #000;
+    --swiper-theme-color: black;
   }
