@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
     <title>Brand Active</title>
 </head>
 
@@ -36,13 +38,39 @@
         <div class="pricing">
             <h1>Lorem ipsum dolor</h1>
             <h3>100,00 PLN</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque varius elit eget vulputate. Pellentesque eleifend felis eget ultricies ullamcorper...</p>
-            <button>See more</button>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque varius elit eget
+                vulputate. Pellentesque eleifend felis eget ultricies ullamcorper...</p>
+            <button>see more</button>
         </div>
         <div class="slider">
-            
+            <div class="swiper swiper--big">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/Business-meeting-photo.jpg" alt="Business meeting">
+                    </div>
+                </div>
+                <div class="btn--prev"></div>
+                <div class="btn--next"></div>
+            </div>
+            <div class="swiper swiper--small">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/Business-meeting-photo.jpg" alt="Business meeting">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/Business-meeting-photo.jpg" alt="Business meeting">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/Business-meeting-photo.jpg" alt="Business meeting">
+                    </div>
+                </div>
+                <div class="btn--prev"></div>
+                <div class="btn--next"></div>
+            </div>
         </div>
     </div>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
