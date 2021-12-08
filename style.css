@@ -19,6 +19,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    list-style-type: none;
 }
 
 /* Fonts*/
@@ -82,7 +83,7 @@ nav {
     margin-left: 80px;
 }
 
-.menu {
+.navbar-menu {
     width: 120px;
     display: inline-flex;
     align-items: center;
@@ -325,7 +326,7 @@ nav {
   }
 
   /* Footer */
-  footer{
+  footer {
       display: flex;
       color: white;
       background-color: black;
