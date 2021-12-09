@@ -91,12 +91,16 @@ video
 {
     font: inherit;
     font-size: 100%;
-    user-select:none;
+
     margin: 0;
     padding: 0;
 
     list-style-type: none;
 
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     vertical-align: baseline;
 
     border: 0;
@@ -158,7 +162,6 @@ video
 
     src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'),
     url('/fonts/Gilroy-ExtraBold.woff2') format('woff2');
-
 }
 
 @font-face
@@ -539,6 +542,9 @@ nav
     width: 23vw;
     height: 22vw;
 
+    text-align: justify;
+    text-justify: inter-word;
+
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -595,7 +601,7 @@ nav
     font-style: normal;
     line-height: 40px;
 
-    width: 23vw;
+    width: 20vw;
     padding-top: 48px;
 }
 
@@ -720,9 +726,18 @@ footer li
     gap: 30px;
 }
 
-.menu li
+.menu__item
 {
     cursor: pointer;
+}
+
+.menu__item:hover
+{
+    font-weight: 800;
+
+    -webkit-transition: 1s;
+         -o-transition: 1s;
+            transition: 1s;
 }
 
 .newsletter
@@ -1216,6 +1231,8 @@ footer li
     }
     .quote-card p
     {
+        line-height: 18px;
+
         width: 19vw;
     }
 
