@@ -5,7 +5,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
+b, u, i, input, input:active, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
@@ -20,6 +20,12 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
     list-style-type: none;
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
 /* Fonts*/
@@ -328,12 +334,12 @@ nav {
   /* Footer */
   footer {
       display: flex;
-      justify-content: space-between;
       color: white;
       background-color: black;
       height: 234px;
       margin-top: 60px;
       padding: 100px 240px;
+      gap: 86px;
   }
 
   footer h4{
@@ -357,7 +363,7 @@ nav {
       flex-direction: column;
       gap: 40px;
   }
-  
+
   .brand-logo-footer{
     width:250px;
 }
@@ -366,16 +372,24 @@ nav {
       gap: 34px;
   }
 
+  .footer__items{
+      display:flex;
+      justify-content: space-between;
+      width:100%;
+      padding-top: 20px;
+  }
+
   .menu {
     display:flex;
     flex-direction: column;
-    padding-top: 20px;
+    gap: 30px;
   }
 
   .newsletter{
     display:flex;
     flex-direction: column;
-    padding-top: 20px;
+    gap: 30px;
   }
 
   /* Uniwersalizacja social icons z nabar icons */
+  
