@@ -820,5 +820,29 @@ footer li
     height: 20vw;
 }
 
+/* Quote card*/
+.quote-card
+{
+    display: flex;
+    flex-direction: column;
+
+    width:23vw;
+    height: 22vw;
+
+
+    align-items: center;
+    gap: 67px;
+}
+
+.quote-card p
+{
+    
+}
+
+.quote-card h1
+{
+    
+}
+
 }
 
