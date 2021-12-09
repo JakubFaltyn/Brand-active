@@ -102,6 +102,10 @@ html, body
     max-width: 100%;
     overflow-x: hidden;
 }
+
+.pt{
+    padding-top:96px;
+}
 /* Navbar section */
 
 nav
@@ -138,7 +142,6 @@ nav
 {
     display: grid;
 
-    padding-top: 96px;
     padding-right: 240px;
     padding-left: 240px;
 
@@ -197,7 +200,6 @@ nav
     display: flex;
 
     height: 952px;
-    padding-top: 96px;
     padding-right: 240px;
     padding-left: 240px;
 
@@ -337,7 +339,6 @@ nav
 /* Quotes slider */
 .slider-quotes
 {
-    padding-top: 96px;
     padding-right: 240px;
     padding-left: 240px;
 }
