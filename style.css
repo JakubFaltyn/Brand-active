@@ -95,10 +95,12 @@ time, mark, audio, video {
     url('/fonts/Basis\ Grotesque.woff2') format('woff2');
 }
 
-body
+html, body
 {
     font-family: 'Gilroy ExtraBold';
     font-style: normal;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 /* Navbar section */
 
@@ -406,7 +408,7 @@ nav
     padding-top: 48px;
 }
 
-.quote-card h3
+.quote-card h1
 {
     font-family: 'Basis Grotesque Pro';
     font-size: 36px;
@@ -440,9 +442,8 @@ footer
     gap: 86px;
 }
 
-footer h4
+footer h1
 {
-    font-family: 'Gilroy ExtraBold';
     font-size: 20px;
     font-weight: 800;
     font-style: normal;
