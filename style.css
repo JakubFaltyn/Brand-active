@@ -1,20 +1,95 @@
 /* Reset CSS*/
 
-html, body, button, button:hover, button:active, 
-div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, input, input:focus, textarea:focus, 
-select:focus, center,dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	font: inherit;
+html,
+body,
+button,
+button:hover,
+button:active,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+input,
+input:focus,
+textarea:focus,
+select:focus,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video
+{
+    font: inherit;
     font-size: 100%;
 
     margin: 0;
@@ -95,12 +170,15 @@ time, mark, audio, video {
     url('/fonts/Basis\ Grotesque.woff2') format('woff2');
 }
 
-html, body
+html,
+body
 {
     font-family: 'Gilroy ExtraBold';
     font-style: normal;
-    max-width: 100%;
+
     overflow-x: hidden;
+
+    max-width: 100%;
 }
 
 /* Navbar section */
@@ -137,9 +215,11 @@ nav
 .gallery
 {
     display: grid;
-    max-height: 708px;
+
     height: 35vw;
+    max-height: 708px;
     padding: 96px 13vw;
+
     grid-auto-columns: minmax(auto, 340px);
     grid-auto-rows: minmax(auto,321px);
     gap: 1vw;
@@ -242,12 +322,59 @@ nav
     font-style: normal;
     line-height: 30px;
 
+    position: relative;
+    z-index: 0;
+
+    display: inline-block;
+    overflow: hidden;
+
+    box-sizing: border-box;
     width: 105px;
     /* Do uniwersalizacji */
     height: 50px;
 
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+
+    color: black;
     border: 2px solid black;
     background-color: white;
+}
+
+.pricing button::before
+{
+    position: absolute;
+    z-index: -1;
+
+    width: 100%;
+    height: 0;
+
+    content: '';
+    transition-duration: .3s;
+
+    opacity: 1;
+    background: black;
+
+    inset: auto auto 0 0;
+}
+
+
+.pricing button:hover::before
+{
+    width: 100%;
+    height: 100%;
+
+    opacity: 1;
+}
+
+
+.pricing button:hover
+{
+    transition: color .3s ease 0s, background 0s ease .3s;
+
+    color: white;
+    background: rgb(255, 255, 255);
 }
 
 /* Slider section */
@@ -279,7 +406,6 @@ nav
     position: relative;
 
     overflow: hidden;
-
 }
 
 .swiper-slide img
@@ -345,9 +471,8 @@ nav
     display: flex;
     flex-direction: column;
 
-    width:23vw;
+    width: 23vw;
     height: 22vw;
-
 
     align-items: center;
     gap: 67px;
@@ -400,7 +525,7 @@ nav
     font-style: normal;
     line-height: 40px;
 
-    width:23vw;
+    width: 23vw;
     padding-top: 48px;
 }
 
@@ -484,10 +609,13 @@ footer li
     justify-content: space-between;
 }
 
-.menu-wrapper{
+.menu-wrapper
+{
     display: flex;
+
+    width: 20vw;
+
     justify-content: space-between;
-    width: 20vw
 }
 
 .menu
@@ -518,7 +646,7 @@ footer li
     font-weight: normal;
     font-style: normal;
     line-height: 30px;
-    
+
     width: 340px;
     margin: 15px 0;
 
@@ -535,461 +663,553 @@ footer li
     font-weight: 300;
     font-style: normal;
     line-height: 30px;
-    transition: 0.25s;
 
+    position: relative;
+    z-index: 0;
+
+    display: inline-block;
+    overflow: visible;
+    overflow: hidden;
+
+    box-sizing: border-box;
     width: 105px;
     height: 50px;
 
+    transition: .25s;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+
     color: white;
-    border: 2px solid;
+    border: 2px solid rgb(255, 255, 255);
     background-color: black;
-    overflow: visible;
+
     align-self: flex-end;
 }
 
-.newsletter__form button:hover,
-.newsletter__form button:focus {
-  box-shadow: inset 0 -3.25em 0 0 white;
-}
 
-@media screen and (max-width: 1700px) {
-nav {
-    height: 120px;
-}
-.gallery {
-    padding-top: 30px;
-}
-
-.pricing
+.newsletter__form button::before
 {
-    display: flex;
-    flex-direction: column;
+    position: absolute;
+    z-index: -1;
 
-    width: 30vw;
+    width: 100%;
+    height: 0;
 
-    gap: 24px;
+    content: '';
+    transition-duration: .3s;
+
+    opacity: 1;
+    background: rgb(255, 255, 255);
+
+    inset: auto auto 0 0;
 }
-.pricing h1
+
+
+.newsletter__form button:hover::before
 {
-    font-size: 40px;
-    line-height: 40px;
+    width: 100%;
+    height: 100%;
+
+    opacity: 1;
 }
 
-.pricing h3
+
+.newsletter__form button:hover
 {
-    font-size: 26px;
-    line-height: 30px;
+    transition: color .3s ease 0s, background 0s ease .3s;
+
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
 }
 
-.pricing p
+
+@media screen and (max-width: 1700px)
 {
-    font-size: 18px;
-    line-height: 25px;
+    nav
+    {
+        height: 120px;
+    }
+    .gallery
+    {
+        padding-top: 30px;
+    }
+
+    .pricing
+    {
+        display: flex;
+        flex-direction: column;
+
+        width: 30vw;
+
+        gap: 24px;
+    }
+    .pricing h1
+    {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .pricing h3
+    {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .pricing p
+    {
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .swiper--quotes
+    {
+        height: 450px;
+    }
+    .quote-card p
+    {
+        font-size: 20px;
+        line-height: 35px;
+    }
+
+    .quote-card h1
+    {
+        font-size: 26px;
+    }
+
+    .quote-card p::after
+    {
+        margin-bottom: 130px;
+    }
 }
-.swiper--quotes
+
+@media screen and (max-width: 1590px)
 {
-    height: 450px;
-}
-.quote-card p {
-    font-size: 20px;
-    line-height: 35px;
-}
-
-.quote-card h1 {
-    font-size: 26px;
-}
-
-.quote-card p::after
-{
-    margin-bottom: 130px;
-}
-}
-
-@media screen and (max-width: 1590px) {
     .quote-card p::before
     {
-        width:55px;
+        width: 55px;
         height: 50px;
         margin-top: 20px;
     }
 
     .quote-card p::after
     {
-        width:55px;
+        width: 55px;
         height: 50px;
         margin-bottom: 190px;
     }
 
-    .quote-card p {
+    .quote-card p
+    {
         font-size: calc(1.1vw + 3px);
         line-height: 25px;
     }
-    
-    .quote-card h1 {
+
+    .quote-card h1
+    {
         font-size: 24px;
     }
 }
 
-@media screen and (max-width: 1300px) {
-nav {
-    height: 90px;
-}
-
-.brand-logo--navbar {
-    width: 200px;
-}
-
-.pricing
+@media screen and (max-width: 1300px)
 {
-    width: 30vw;
+    nav
+    {
+        height: 90px;
+    }
 
-    gap: 15px;
-}
+    .brand-logo--navbar
+    {
+        width: 200px;
+    }
 
-.pricing h1
-{
-    font-size: 32px;
-    line-height: 25px;
-}
+    .pricing
+    {
+        width: 30vw;
 
-.pricing h3
-{
-    font-size: 22px;
-    line-height: 30px;
-}
+        gap: 15px;
+    }
 
-.pricing p
-{
-    font-size: 16px;
-    line-height: 25px;
-}
+    .pricing h1
+    {
+        font-size: 32px;
+        line-height: 25px;
+    }
 
-.pricing button
-{
-    font-size: 16px;
-    width: 90px;
-    height: 40px;
-}
+    .pricing h3
+    {
+        font-size: 22px;
+        line-height: 30px;
+    }
 
-.swiper--quotes {
-    height: 350px;
-}
+    .pricing p
+    {
+        font-size: 16px;
+        line-height: 25px;
+    }
 
-.quote-card  {
-    gap: 30px;
-}
+    .pricing button
+    {
+        font-size: 16px;
 
-.quote-card p {
-    font-size: calc(1.1vw + 3px);
-    line-height: 20px;
-}
+        width: 90px;
+        height: 40px;
+    }
 
-.quote-card p::after
+    .swiper--quotes
+    {
+        height: 350px;
+    }
+
+    .quote-card
+    {
+        gap: 30px;
+    }
+
+    .quote-card p
+    {
+        font-size: calc(1.1vw + 3px);
+        line-height: 20px;
+    }
+
+    .quote-card p::after
     {
         margin-bottom: 130px;
     }
 
-  /* Footer */
-footer
+    /* Footer */
+    footer
+    {
+        display: flex;
+
+        height: 234px;
+        margin-top: 60px;
+        padding: 100px 13vw;
+
+        color: white;
+        background-color: black;
+
+        gap: 5vw;
+    }
+
+    footer h1
+    {
+        font-size: 15px;
+        font-weight: 800;
+        font-style: normal;
+        line-height: 25px;
+    }
+
+    footer li
+    {
+        font-family: 'Gilroy Light';
+        font-size: 12px;
+        font-weight: 300;
+        font-style: normal;
+        line-height: 40px;
+    }
+
+    .social
+    {
+        display: flex;
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .brand-logo--footer
+    {
+        width: 200px;
+    }
+    .social__icons
+    {
+        gap: 20px;
+    }
+
+    .menu
+    {
+        display: flex;
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .newsletter
+    {
+        gap: 10px;
+    }
+
+    .newsletter__form input
+    {
+        font-family: 'Basis Grotesque Pro';
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 30px;
+
+        width: 240px;
+        margin: 15px 0;
+
+        color: white;
+        border: none;
+        border-bottom: 1px solid white;
+        background-color: transparent;
+    }
+
+    .newsletter__form button
+    {
+        font-size: 13px;
+
+        width: 90px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 960px)
 {
-    display: flex;
+    .offer
+    {
+        flex-direction: column;
 
-    height: 234px;
-    margin-top: 60px;
-    padding: 100px 13vw;
+        padding-top: 80px;
 
-    color: white;
-    background-color: black;
+        gap: 120px;
+    }
 
-    gap: 5vw;
-}
+    .pricing
+    {
+        display: flex;
+        flex-direction: column;
 
-footer h1
-{
-    font-size: 15px;
-    font-weight: 800;
-    font-style: normal;
-    line-height: 25px;
-}
+        width: 60vw;
 
-footer li
-{
-    font-family: 'Gilroy Light';
-    font-size: 12px;
-    font-weight: 300;
-    font-style: normal;
-    line-height: 40px;
-}
+        align-items: center;
+        gap: 15px;
+    }
 
-.social
-{
-    display: flex;
-    flex-direction: column;
+    .pricing h1
+    {
+        font-size: 40px;
+        line-height: 25px;
+    }
 
-    gap: 20px;
-}
+    .pricing h3
+    {
+        font-size: 26px;
+        line-height: 30px;
 
-.brand-logo--footer
-{
-    width: 200px;
-}
-.social__icons
-{
-    gap: 20px;
-}
+        padding-top: 10px;
+    }
 
-.menu
-{
-    display: flex;
-    flex-direction: column;
+    .pricing p
+    {
+        font-size: 18px;
+        line-height: 25px;
 
-    gap: 15px;
-}
+        text-align: center;
+    }
 
-.newsletter {
-    gap: 10px;
-}
+    .pricing button
+    {
+        font-size: 18px;
+        line-height: 30px;
 
-.newsletter__form input
-{
-    font-family: 'Basis Grotesque Pro';
-    font-size: 14px;
-    font-weight: normal;
-    font-style: normal;
-    line-height: 30px;
-    
-    width: 240px;
-    margin: 15px 0;
+        width: 95px;
+        height: 45px;
+    }
 
-    color: white;
-    border: none;
-    border-bottom: 1px solid white;
-    background-color: transparent;
-}
+    .slider-gallery
+    {
+        display: flex;
+        flex-direction: column;
 
-.newsletter__form button
-{
-    font-size: 13px;
-    width: 90px;
-    height: 40px;
-}
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+    }
 
-}
+    .swiper--big
+    {
+        width: 70vw;
+        height: 40vw;
+    }
 
-@media screen and (max-width: 960px) {
-.offer {
-    padding-top: 80px;
-    flex-direction: column;
-    gap: 120px;
-}
+    .swiper--small
+    {
+        max-width: 70vw;
+        height: 20vw;
+    }
 
-.pricing {
-    display: flex;
-    flex-direction: column;
-    width: 60vw;
-    align-items: center;
-    gap: 15px;
-}
+    /* Quote card*/
 
-.pricing h1
-{
-    font-size: 40px;
-    line-height: 25px;
-}
+    .quote-card
+    {
+        gap: 20px;
+    }
 
-.pricing h3
-{
-    padding-top: 10px;
-    font-size: 26px;
-    line-height: 30px;
-}
-
-.pricing p
-{
-    font-size: 18px;
-    line-height: 25px;
-    text-align: center;
-}
-
-.pricing button
-{
-    font-size: 18px;
-    line-height: 30px;
-
-    width: 95px;
-    height: 45px;
-}
-
-.slider-gallery
-{
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-}
-
-.swiper--big
-{
-    width: 70vw;
-    height: 40vw;
-}
-
-.swiper--small
-{
-    max-width: 70vw;
-    height: 20vw;
-}
-
-/* Quote card*/
-
-.quote-card
-{
-    gap: 20px;
-}
-
-.quote-card p::before
+    .quote-card p::before
     {
         width: 35px;
         height: 30px;
         margin-top: 37px;
     }
 
-.quote-card p::after
+    .quote-card p::after
     {
         width: 35px;
         height: 30px;
         margin-bottom: 100px;
     }
-.quote-card p
+    .quote-card p
+    {
+        width: 19vw;
+    }
+
+    .quote-card h1
+    {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    footer
+    {
+        height: 100%;
+
+        justify-content: space-between;
+    }
+
+    .menu-wrapper
+    {
+        width: 240px;
+
+        gap: 50px;
+    }
+
+    .newsletter
+    {
+        width: 240px;
+
+        gap: 0;
+    }
+
+    .newsletter__form input
+    {
+        margin-top: 0;
+    }
+
+    .footer__items
+    {
+        flex-direction: column;
+
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 720px)
 {
-    width:19vw;
-}
- 
-.quote-card h1
-{
-    font-size: 20px;
-    line-height: 30px;
-}
-
-footer {
-    justify-content: space-between;
-    height:100%;
-}
-
-.menu-wrapper{
-    width: 240px;
-    gap: 50px;
-}
-
-.newsletter{
-    width: 240px;
-    gap: 0;
-}
-
-.newsletter__form input{
-    margin-top: 0;
-}
-
-.footer__items{
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-}
-
-@media screen and (max-width: 720px) {
-    nav{
+    nav
+    {
         margin: 0 5vw;
     }
-    .gallery {
-        padding: 5vw
+    .gallery
+    {
+        padding: 5vw;
     }
-    .offer{
+    .offer
+    {
         padding: 140px 5vw 96px;
     }
-    .pricing{
-        width:80vw;
+    .pricing
+    {
+        width: 80vw;
+
         gap: 30px;
     }
 
-    .slider-gallery{
-        width:80vw;
+    .slider-gallery
+    {
+        width: 80vw;
     }
 
     .swiper--big
-{
-    width: 80vw;
-    height: 40vw;
-}
+    {
+        width: 80vw;
+        height: 40vw;
+    }
 
-.swiper--small
-{
-    max-width: 80vw;
-    height: 25vw;
-}
+    .swiper--small
+    {
+        max-width: 80vw;
+        height: 25vw;
+    }
 
-    .slider-quotes{
+    .slider-quotes
+    {
         padding: 5vw;
     }
 
     .swiper--quotes
-{
-    width: 240px;
-}
-.quote-card
-{
-    display: flex;
-    flex-direction: column;
+    {
+        width: 240px;
+    }
+    .quote-card
+    {
+        display: flex;
+        flex-direction: column;
 
-    width:240px;
-    height: 22vw;
+        width: 240px;
+        height: 22vw;
 
-
-    align-items: center;
-    gap: 30px;
-}
-
-.quote-card p
-{
-    font-size: 16px;
-    width: 240px;
-}
-    
-    footer{
-        padding: 100px 5vw;
-        flex-direction:column;
-        align-items:center;
+        align-items: center;
+        gap: 30px;
     }
 
-    .social {
+    .quote-card p
+    {
+        font-size: 16px;
+
+        width: 240px;
+    }
+
+    footer
+    {
+        flex-direction: column;
+
+        padding: 100px 5vw;
+
         align-items: center;
     }
-    
-    
+
+    .social
+    {
+        align-items: center;
+    }
 }
 
-@media screen and (max-width: 440px) {
-    .brand-logo--navbar{
+@media screen and (max-width: 440px)
+{
+    .brand-logo--navbar
+    {
         width: 120px;
     }
 
-    .pricing {
+    .pricing
+    {
         gap: 10px;
     }
 
-    .pricing h1{
+    .pricing h1
+    {
         font-size: 28px;
     }
 
-    .pricing h3{
+    .pricing h3
+    {
         font-size: 20px;
     }
 
-    .pricing p {
-        font-size:16px;
+    .pricing p
+    {
+        font-size: 16px;
     }
 }
-
-
