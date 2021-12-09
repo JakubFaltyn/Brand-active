@@ -428,12 +428,12 @@ footer
 
     height: 234px;
     margin-top: 60px;
-    padding: 100px 240px;
+    padding: 100px 13vw;
 
     color: white;
     background-color: black;
 
-    gap: 86px;
+    gap: 5vw;
 }
 
 footer h1
@@ -539,8 +539,14 @@ footer li
     align-self: flex-end;
 }
 
-/* Uniwersalizacja social icons z nabar icons */
 @media screen and (max-width: 1700px) {
+nav {
+    height: 120px;
+}
+.gallery {
+    padding-top: 30px;
+}
+
 .pricing
 {
     display: flex;
@@ -587,12 +593,170 @@ footer li
 }
 
 @media screen and (max-width: 1590px) {
+    .quote-card p::after
+    {
+        margin-bottom: 160px;
+    }
+
     .quote-card p {
         font-size: calc(1.1vw + 3px);
-        line-height: 35px;
+        line-height: 25px;
     }
     
     .quote-card h1 {
-        font-size: 26px;
+        font-size: 24px;
     }
 }
+
+@media screen and (max-width: 1300px) {
+nav {
+    height: 90px;
+}
+
+.brand-logo--navbar {
+    width: 200px;
+}
+
+.pricing
+{
+    width: 30vw;
+
+    gap: 15px;
+}
+
+.pricing h1
+{
+    font-size: 32px;
+    line-height: 25px;
+}
+
+.pricing h3
+{
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.pricing p
+{
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.pricing button
+{
+    font-size: 16px;
+    width: 90px;
+    height: 40px;
+}
+
+.swiper--quotes {
+    height: 350px;
+}
+
+.quote-card  {
+    gap: 30px;
+}
+
+.quote-card p {
+    font-size: calc(1.1vw + 3px);
+    line-height: 20px;
+}
+
+.quote-card p::after
+    {
+        margin-bottom: 200px;
+    }
+
+  /* Footer */
+footer
+{
+    display: flex;
+
+    height: 234px;
+    margin-top: 60px;
+    padding: 100px 13vw;
+
+    color: white;
+    background-color: black;
+
+    gap: 5vw;
+}
+
+footer h1
+{
+    font-size: 15px;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 25px;
+}
+
+footer li
+{
+    font-family: 'Gilroy Light';
+    font-size: 12px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 40px;
+}
+
+.social
+{
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.brand-logo--footer
+{
+    width: 200px;
+}
+.social__icons
+{
+    gap: 20px;
+}
+
+.menu
+{
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.newsletter {
+    gap: 10px;
+}
+
+.newsletter__form input
+{
+    font-family: 'Basis Grotesque Pro';
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 30px;
+    
+    width: 240px;
+    margin: 15px 0;
+
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+}
+
+.newsletter__form button
+{
+    font-size: 13px;
+    width: 90px;
+    height: 40px;
+}
+
+}
+
+@media screen and (max-width: 915px) {
+.offer {
+    flex-direction: column;
+}
+}
+
