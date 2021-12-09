@@ -103,34 +103,30 @@ html, body
     overflow-x: hidden;
 }
 
-.pt{
-    padding-top:96px;
-}
 /* Navbar section */
 
 nav
 {
-    display: inline-flex;
+    display: flex;
 
-    width: 100%;
+    max-width: 100%;
     height: 171px;
+    margin: 0 80px;
 
     align-items: center;
     justify-content: space-between;
 }
 
-.brand-logo-navbar
+.brand-logo--navbar
 {
     width: 248px;
-    margin-left: 80px;
 }
 
 .navbar-menu
 {
-    display: inline-flex;
+    display: flex;
 
     width: 120px;
-    margin-right: 80px;
 
     align-items: center;
     justify-content: space-between;
@@ -141,13 +137,12 @@ nav
 .gallery
 {
     display: grid;
-
-    padding-right: 240px;
-    padding-left: 240px;
-
-    grid-auto-columns: 340px;
-    grid-auto-rows: 321px;
-    gap: 24px;
+    max-height: 708px;
+    height: 35vw;
+    padding: 96px 13vw;
+    grid-auto-columns: minmax(auto, 340px);
+    grid-auto-rows: minmax(auto,321px);
+    gap: 1vw;
 }
 
 .gallery__item
@@ -199,9 +194,7 @@ nav
 {
     display: flex;
 
-    height: 952px;
-    padding-right: 240px;
-    padding-left: 240px;
+    padding: 0 13vw 96px;
 
     align-items: center;
     justify-items: center;
@@ -271,14 +264,14 @@ nav
 
 .swiper--big
 {
-    width: 708px;
-    height: 708px;
+    width: min(708px, 35.8vw);
+    height: min(708px, 35.8vw);
 }
 
 .swiper--small
 {
-    width: 708px;
-    height: 220px;
+    max-width: min(708px, 35.8vw);
+    height: min(220px,12vw);
 }
 
 .swiper-slide
@@ -287,8 +280,6 @@ nav
 
     overflow: hidden;
 
-    width: 100%;
-    height: 100%;
 }
 
 .swiper-slide img
@@ -339,13 +330,12 @@ nav
 /* Quotes slider */
 .slider-quotes
 {
-    padding-right: 240px;
-    padding-left: 240px;
+    padding: 0 13vw;
 }
 
 .swiper--quotes
 {
-    width: 1440px;
+    width: 100%;
     height: 500px;
 }
 /* Quote card*/
@@ -354,7 +344,7 @@ nav
     display: flex;
     flex-direction: column;
 
-    width: 475px;
+    width:23vw;
 
     align-items: center;
     gap: 67px;
@@ -400,12 +390,12 @@ nav
 .quote-card p
 {
     font-family: 'Basis Grotesque Pro';
-    font-size: 24px;
+    font-size: 1vw;
     font-weight: normal;
     font-style: normal;
     line-height: 40px;
 
-    width: 454px;
+    width:23vw;
     padding-top: 48px;
 }
 
@@ -468,7 +458,7 @@ footer li
     gap: 40px;
 }
 
-.brand-logo-footer
+.brand-logo--footer
 {
     width: 250px;
 }
@@ -548,3 +538,33 @@ footer li
 }
 
 /* Uniwersalizacja social icons z nabar icons */
+@media screen and (max-width: 1660px) {
+.pricing
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 30vw;
+
+    gap: 24px;
+}
+.pricing h1
+{
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.pricing h3
+{
+    font-size: 26px;
+    line-height: 30px;
+}
+
+.pricing p
+{
+    font-family: 'Gilroy Light';
+    font-size: 18px;
+    line-height: 25px;
+}
+
+}
