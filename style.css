@@ -1,12 +1,13 @@
 /* Reset CSS*/
 
-html, body, div, span, applet, object, iframe,
+html, body, button, button:hover, button:active, 
+div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
-b, u, i, input, input:active, center,
-dl, dt, dd, ol, ul, li,
+b, u, i, input, input:focus, textarea:focus, 
+select:focus, center,dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
@@ -26,6 +27,16 @@ time, mark, audio, video {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+    outline:none;
+        box-shadow: 0px 0px 0px transparent;
+        border: 0px solid transparent;
+        text-shadow: 0px 0px 0px transparent;
+        box-shadow: 0px 0px 0px transparent;
+        border: 0px solid transparent;
+        text-shadow: 0px 0px 0px transparent;
+        outline: none;
+        border: none;
+        outline: 0;
 }
 
 /* Fonts*/
@@ -192,6 +203,7 @@ nav {
     font-weight: 800;
     font-size: 20px;
     line-height: 30px;
+    border: 2px solid black;
 }
 
 /* Slider section */ 
@@ -389,6 +401,40 @@ nav {
     display:flex;
     flex-direction: column;
     gap: 30px;
+  }
+  .newsletter__form {
+    display:flex;
+    flex-direction: column;
+  }
+
+  .newsletter__form input{
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    font-family: "Basis Grotesque Pro";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    width: 80%;
+    margin: 15px 0;
+    width: 340px;
+  }
+
+  .newsletter__form button{
+    height:50px;
+    width:105px;
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    font-family: "Gilroy Light";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 30px;
+    align-self: flex-end;
   }
 
   /* Uniwersalizacja social icons z nabar icons */
