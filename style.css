@@ -91,7 +91,7 @@ video
 {
     font: inherit;
     font-size: 100%;
-
+    user-select:none;
     margin: 0;
     padding: 0;
 
@@ -158,7 +158,7 @@ video
 
     src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'),
     url('/fonts/Gilroy-ExtraBold.woff2') format('woff2');
-    
+
 }
 
 @font-face
