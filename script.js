@@ -1,3 +1,5 @@
+AOS.init();
+
 const sliderBig = new Swiper('.swiper--big', {
     loop: true,
   
