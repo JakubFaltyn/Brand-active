@@ -23,10 +23,15 @@ const sliderBig = new Swiper('.swiper--big', {
   const sliderQuotes = new Swiper('.swiper--quotes', {
     loop: true,
 
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 34,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
     },
+    breakpoints: {
+      720: {
+        slidesPerView: 3,
+      }
+    }
   });

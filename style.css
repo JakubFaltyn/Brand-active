@@ -369,6 +369,7 @@ nav
 
     background-image: url(/assets/Quotes-up-icon.svg);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .quote-card p::after
@@ -388,6 +389,7 @@ nav
 
     background-image: url(/assets/Quotes-down-icon.svg);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .quote-card p
@@ -480,6 +482,12 @@ footer li
     padding-top: 20px;
 
     justify-content: space-between;
+}
+
+.menu-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 20vw
 }
 
 .menu
@@ -593,9 +601,18 @@ nav {
 }
 
 @media screen and (max-width: 1590px) {
+    .quote-card p::before
+    {
+        width:55px;
+        height: 50px;
+        margin-top: 20px;
+    }
+
     .quote-card p::after
     {
-        margin-bottom: 160px;
+        width:55px;
+        height: 50px;
+        margin-bottom: 190px;
     }
 
     .quote-card p {
@@ -664,7 +681,7 @@ nav {
 
 .quote-card p::after
     {
-        margin-bottom: 200px;
+        margin-bottom: 130px;
     }
 
   /* Footer */
@@ -821,28 +838,153 @@ footer li
 }
 
 /* Quote card*/
+
+.quote-card
+{
+    gap: 20px;
+}
+
+.quote-card p::before
+    {
+        width: 35px;
+        height: 30px;
+        margin-top: 37px;
+    }
+
+.quote-card p::after
+    {
+        width: 35px;
+        height: 30px;
+        margin-bottom: 100px;
+    }
+.quote-card p
+{
+    width:19vw;
+}
+ 
+.quote-card h1
+{
+    font-size: 20px;
+    line-height: 30px;
+}
+
+footer {
+    justify-content: space-between;
+    height:100%;
+}
+
+.menu-wrapper{
+    width: 240px;
+    gap: 50px;
+}
+
+.newsletter{
+    width: 240px;
+    gap: 0;
+}
+
+.newsletter__form input{
+    margin-top: 0;
+}
+
+.footer__items{
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+}
+
+@media screen and (max-width: 720px) {
+    nav{
+        margin: 0 5vw;
+    }
+    .gallery {
+        padding: 5vw
+    }
+    .offer{
+        padding: 140px 5vw 96px;
+    }
+    .pricing{
+        width:80vw;
+        gap: 30px;
+    }
+
+    .slider-gallery{
+        width:80vw;
+    }
+
+    .swiper--big
+{
+    width: 80vw;
+    height: 40vw;
+}
+
+.swiper--small
+{
+    max-width: 80vw;
+    height: 25vw;
+}
+
+    .slider-quotes{
+        padding: 5vw;
+    }
+
+    .swiper--quotes
+{
+    width: 240px;
+}
 .quote-card
 {
     display: flex;
     flex-direction: column;
 
-    width:23vw;
+    width:240px;
     height: 22vw;
 
 
     align-items: center;
-    gap: 67px;
+    gap: 30px;
 }
 
 .quote-card p
 {
+    font-size: 16px;
+    width: 240px;
+}
+    
+    footer{
+        padding: 100px 5vw;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .social {
+        align-items: center;
+    }
+    
     
 }
 
-.quote-card h1
-{
-    
+@media screen and (max-width: 440px) {
+    .brand-logo--navbar{
+        width: 120px;
+    }
+
+    .pricing {
+        gap: 10px;
+    }
+
+    .pricing h1{
+        font-size: 28px;
+    }
+
+    .pricing h3{
+        font-size: 20px;
+    }
+
+    .pricing p {
+        font-size:16px;
+    }
 }
 
-}
 
