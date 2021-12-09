@@ -103,14 +103,8 @@ video
             user-select: none;
     vertical-align: baseline;
 
-    border: 0;
-    border: none;
     border: 0 solid transparent;
-    border: 0 solid transparent;
-    border: none;
     outline: none;
-    outline: none;
-    outline: 0;
     background-color: transparent;
     background-image: none;
     -webkit-box-shadow: none;
@@ -118,7 +112,6 @@ video
             box-shadow: none;
             box-shadow: 0 0 0 transparent;
             box-shadow: 0 0 0 transparent;
-    text-shadow: 0 0 0 transparent;
     text-shadow: 0 0 0 transparent;
 }
 
@@ -486,11 +479,6 @@ nav
 .swiper-button-previous
 {
     background-image: url(/assets/Previous-icon.svg);
-}
-
-.swiper-button-next
-{
-    background-image: url(/assets/Next-icon.svg);
 }
 
 .swiper-button-next
